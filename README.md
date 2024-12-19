@@ -32,7 +32,7 @@ apt upgrade
 apt install sudo nano adduser -y
 ```
 
-Create an user and give the sudo privileges
+Create an user and give the sudo privileges:
 
 ```
 adduser ubuntu
@@ -53,6 +53,14 @@ proot-distro login debian --user droidmaster
 sudo apt install xfce4
 ```
 
+## Hardware Acceleration in Termux
+
+You need to install the following packages in Termux:
+
+```
+pkg install mesa-zink virglrenderer-mesa-zink vulkan-loader-android virglrenderer-android
+```
+
 ## ⬇️ Download scripts easily
 
 ```
@@ -60,9 +68,8 @@ wget https://raw.githubusercontent.com/nguyenhoatien/Termux-Desktops/main/startx
 chmod +x startxfce4_ubuntu.sh
 ```
 
-Now you can run Ubuntu with XFCE4 UI
+Now you can run Ubuntu with XFCE4 UI:
 
 ```
 ./startxfce4_ubuntu.sh
 ```
-
