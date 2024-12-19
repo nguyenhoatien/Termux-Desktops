@@ -18,13 +18,13 @@ am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity > /dev/null 2>&1
 sleep 1
 
 # Start virgl server
-#virgl_test_server_android &
+virgl_test_server_android &
 
 # Login in PRoot Environment. Do some initialization for PulseAudio, /tmp directory
 # and run XFCE4 as user ubuntu.
 # See also: https://github.com/termux/proot-distro
 # Argument -- acts as terminator of proot-distro login options processing.
 # All arguments behind it would not be treated as options of PRoot Distro.
-proot-distro login ubuntu --shared-tmp -- /bin/bash -c  'export PULSE_SERVER=127.0.0.1 && export XDG_RUNTIME_DIR=${TMPDIR} && su - ubuntu -c "env DISPLAY=:0 startxfce4"'
+proot-distro login ubuntu --shared-tmp -- /bin/bash -c  'export PULSE_SERVER=127.0.0.1 && export XDG_RUNTIME_DIR=${TMPDIR} && su - ubuntu -c "env DISPLAY=:0 GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 startxfce4"'
 
 exit 0
