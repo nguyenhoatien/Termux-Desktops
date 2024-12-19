@@ -49,7 +49,10 @@ ubuntu ALL=(ALL:ALL) ALL
 XFCE4
 
 ```
-proot-distro login debian --user droidmaster
+proot-distro login ubuntu --user ubuntu
+```
+
+```
 sudo apt install xfce4
 ```
 
