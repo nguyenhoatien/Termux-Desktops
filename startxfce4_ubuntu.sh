@@ -17,6 +17,9 @@ sleep 3
 am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity > /dev/null 2>&1
 sleep 1
 
+# Start virgl server
+#virgl_test_server_android &
+
 # Login in PRoot Environment. Do some initialization for PulseAudio, /tmp directory
 # and run XFCE4 as user ubuntu.
 # See also: https://github.com/termux/proot-distro
