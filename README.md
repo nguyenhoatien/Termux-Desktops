@@ -34,7 +34,7 @@ Update repositories and install needed packages:
 apk update
 apk upgrade
 
-apk add sudo nano dbus-x11 xfce4
+apk add sudo nano dbus-x11 xfce4 xfce4-terminal
 ```
 
 Create an user and give the sudo privileges:
