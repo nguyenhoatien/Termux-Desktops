@@ -1,6 +1,11 @@
-# Termux-Desktops
+# PROOT-DISTRO (🍥 DEBIAN)
 
 ## 🏁 First steps
+
+We are going to use Termux and Termux X11 in order to have a full Linux Desktop in our Android devices.
+
+- [Termux](https://github.com/termux/termux-app/releases)
+- [Termux X11](https://github.com/termux/termux-x11/releases)
 
 First you need to install the following packages in Termux:
 
