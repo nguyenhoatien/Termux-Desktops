@@ -1,4 +1,4 @@
-# PROOT-DISTRO (🍥 DEBIAN)
+# Termux Desktops (⛰️ ALPINE)
 
 ## 🏁 First steps
 
@@ -21,44 +21,30 @@ pkg install wget
 pkg install git
 ```
 
-Then install Debian and login once it finishes:
+Then install Alpine and login once it finishes:
 
 ```
-proot-distro install debian
-proot-distro login debian
+proot-distro install alpine
+proot-distro login alpine
 ```
 
-Update repositories and install any package you want:
+Update repositories and install needed packages:
 
 ```
-apt update 
-apt upgrade
+apk update
+apk upgrade
 
-apt install sudo nano adduser -y
+apk add sudo nano dbus-x11 xfce4
 ```
 
 Create an user and give the sudo privileges:
 
 ```
-adduser debian
+adduser alpine
 nano /etc/sudoers
-```
 
-```
-# Add the following line to the file
-debian ALL=(ALL:ALL) ALL
-```
-
-## ⚙️ Installing Desktops
-
-XFCE4
-
-```
-proot-distro login debian --user debian
-```
-
-```
-sudo apt install xfce4
+# Add the following line to the sudoers file
+alpine All=(ALL:ALL) ALL
 ```
 
 ## Hardware Acceleration in Termux
@@ -72,12 +58,12 @@ pkg install mesa-zink virglrenderer-mesa-zink vulkan-loader-android virglrendere
 ## ⬇️ Download scripts easily
 
 ```
-wget https://raw.githubusercontent.com/nguyenhoatien/Termux-Desktops/main/startxfce4_debian.sh
-chmod +x startxfce4_debian.sh
+wget https://raw.githubusercontent.com/nguyenhoatien/Termux-Desktops/main/startxfce4_alpine.sh
+chmod +x startxfce4_alpine.sh
 ```
 
-Now you can run Debian with XFCE4 UI:
+Now you can run Alpine with XFCE4 UI:
 
 ```
-./startxfce4_debian.sh
+./startxfce4_alpine.sh
 ```
