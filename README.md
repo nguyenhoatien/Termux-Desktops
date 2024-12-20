@@ -16,11 +16,11 @@ pkg install wget
 pkg install git
 ```
 
-Then install Ubuntu and login once it finishes:
+Then install Debian and login once it finishes:
 
 ```
-proot-distro install ubuntu
-proot-distro login ubuntu
+proot-distro install debian
+proot-distro login debian
 ```
 
 Update repositories and install any package you want:
@@ -35,13 +35,13 @@ apt install sudo nano adduser -y
 Create an user and give the sudo privileges:
 
 ```
-adduser ubuntu
+adduser debian
 nano /etc/sudoers
 ```
 
 ```
 # Add the following line to the file
-ubuntu ALL=(ALL:ALL) ALL
+debian ALL=(ALL:ALL) ALL
 ```
 
 ## ⚙️ Installing Desktops
@@ -49,7 +49,7 @@ ubuntu ALL=(ALL:ALL) ALL
 XFCE4
 
 ```
-proot-distro login ubuntu --user ubuntu
+proot-distro login debian --user debian
 ```
 
 ```
@@ -67,12 +67,12 @@ pkg install mesa-zink virglrenderer-mesa-zink vulkan-loader-android virglrendere
 ## ⬇️ Download scripts easily
 
 ```
-wget https://raw.githubusercontent.com/nguyenhoatien/Termux-Desktops/main/startxfce4_ubuntu.sh
-chmod +x startxfce4_ubuntu.sh
+wget https://raw.githubusercontent.com/nguyenhoatien/Termux-Desktops/main/startxfce4_debian.sh
+chmod +x startxfce4_debian.sh
 ```
 
-Now you can run Ubuntu with XFCE4 UI:
+Now you can run Debian with XFCE4 UI:
 
 ```
-./startxfce4_ubuntu.sh
+./startxfce4_debian.sh
 ```
